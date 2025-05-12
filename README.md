@@ -1,7 +1,3 @@
-Here's how you can structure your **README.md** based on the **TP9DPBO2025C** project, applying the **MVP** architecture for **Manajemen Mahasiswa**:
-
----
-
 # TP9DPBO2025C1
 
 ## Janji
