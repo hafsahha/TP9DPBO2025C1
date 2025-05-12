@@ -1,7 +1,3 @@
-Here's how you can structure your **README.md** based on the **TP9DPBO2025C** project, applying the **MVP** architecture for **Manajemen Mahasiswa**:
-
----
-
 # TP9DPBO2025C1
 
 ## Janji
@@ -134,15 +130,11 @@ TP9DPBO2025C/
 ---
 
 ## Dokumentasi
+| Halaman                 | Preview                                          |
+| ----------------------- | ------------------------------------------------ |
+| **Manajemen Mahasiswa** | ![image](https://github.com/user-attachments/assets/2f19f1ab-3ccf-403b-a563-f583a01df30a) |
+| **Edit Mahasiswa**      | ![Edit Mahasiswa](https://github.com/user-attachments/assets/e7b59272-4a4c-403a-be0c-0eff178616c7)  |
 
 
 ---
-
-## Screenshots
-
-| Halaman                 | Preview                                          |
-| ----------------------- | ------------------------------------------------ |
-| **Manajemen Mahasiswa** | ![Mahasiswa](Screenshot/ManagementMahasiswa.png) |
-| **Edit Mahasiswa**      | ![Edit Mahasiswa](Screenshot/EditMahasiswa.png)  |
-
 
