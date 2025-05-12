@@ -1,0 +1,88 @@
+<!-- edit_student_form.php / add_student_form.php -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><?= isset($id) ? "Edit Mahasiswa" : "Tambah Mahasiswa" ?></title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container mt-4">
+    <h2 class="text-center"><?= isset($id) ? "Edit Mahasiswa" : "Tambah Mahasiswa" ?></h2>
+
+    <div class="card p-4">
+      <form action="index.php" method="POST">
+        <!-- Hidden input for ID (only present when editing) -->
+        <input type="hidden" name="id" value="<?= isset($id) ? $id : '' ?>">
+
+        <!-- NIM -->
+        <div class="form-group">
+          <label for="nim"><strong>NIM</strong></label>
+          <input type="text" class="form-control" id="nim" name="nim" placeholder="Masukkan NIM"
+            value="<?= isset($nim) ? $nim : '' ?>" required>
+        </div>
+
+        <!-- Nama -->
+        <div class="form-group">
+          <label for="nama"><strong>Nama</strong></label>
+          <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Lengkap"
+            value="<?= isset($nama) ? $nama : '' ?>" required>
+        </div>
+
+        <!-- Tempat Lahir -->
+        <div class="form-group">
+          <label for="tempat"><strong>Tempat Lahir</strong></label>
+          <input type="text" class="form-control" id="tempat" name="tempat" placeholder="Masukkan Tempat Lahir"
+            value="<?= isset($tempat) ? $tempat : '' ?>" required>
+        </div>
+
+        <!-- Tanggal Lahir -->
+        <div class="form-group">
+          <label for="tl"><strong>Tanggal Lahir</strong></label>
+          <input type="date" class="form-control" id="tl" name="tl" value="<?= isset($tglLahir) ? $tglLahir : '' ?>"
+            required>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group">
+          <label for="gender"><strong>Gender</strong></label>
+          <select class="form-control" id="gender" name="gender" required>
+            <option value="L" <?= isset($gender) && $gender == 'L' ? 'selected' : '' ?>>Laki-laki</option>
+            <option value="P" <?= isset($gender) && $gender == 'P' ? 'selected' : '' ?>>Perempuan</option>
+          </select>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email"><strong>Email</strong></label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="contoh@email.com"
+            value="<?= isset($email) ? $email : '' ?>" required>
+        </div>
+
+        <!-- Telepon -->
+        <div class="form-group">
+          <label for="telp"><strong>Telepon</strong></label>
+          <input type="text" class="form-control" id="telp" name="telp" placeholder="Masukkan Nomor Telepon"
+            value="<?= isset($telepon) ? $telepon : '' ?>" required>
+        </div>
+
+        <div class="text-center mt-4">
+          <!-- Dynamically change the button text -->
+          <button type="submit" name="<?= isset($id) ? 'update' : 'tambah' ?>" class="btn btn-primary btn-submit">
+            <?= isset($id) ? 'Update Mahasiswa' : 'Tambah Mahasiswa' ?>
+          </button>
+          <a href="index.php" class="btn btn-secondary btn-submit">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
