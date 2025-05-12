@@ -130,6 +130,10 @@ TP9DPBO2025C/
 ---
 
 ## Dokumentasi
+| Halaman                 | Preview                                          |
+| ----------------------- | ------------------------------------------------ |
+| **Manajemen Mahasiswa** | ![image](https://github.com/user-attachments/assets/2f19f1ab-3ccf-403b-a563-f583a01df30a) |
+| **Edit Mahasiswa**      | ![Edit Mahasiswa](https://github.com/user-attachments/assets/e7b59272-4a4c-403a-be0c-0eff178616c7)  |
 
 
 ---
