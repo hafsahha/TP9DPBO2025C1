@@ -134,11 +134,3 @@ TP9DPBO2025C/
 
 ---
 
-## Screenshots
-
-| Halaman                 | Preview                                          |
-| ----------------------- | ------------------------------------------------ |
-| **Manajemen Mahasiswa** | ![Mahasiswa](Screenshot/ManagementMahasiswa.png) |
-| **Edit Mahasiswa**      | ![Edit Mahasiswa](Screenshot/EditMahasiswa.png)  |
-
-
