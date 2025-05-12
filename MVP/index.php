@@ -29,6 +29,7 @@ if(isset($_POST['add_proses'])){
     $email = $_POST['email'];
     $telp = $_POST['telp'];
     $tp->update($id, $nim, $nama, $tempat, $tl, $gender, $email, $telp);
+    $tp->tampil();
 }else if(isset($_POST['delete_proses'])){
     $id = $_POST['id'];
     $tp->hapus($id);   
@@ -36,6 +37,7 @@ if(isset($_POST['add_proses'])){
 }else if(isset($_GET['id_hapus'])){
     $id = $_GET['id_hapus'];
     $tp->delete($id); 
+    $tp->tampil();
 }else if(isset($_GET['id_edit'])){
     $id = $_GET['id_edit'];
     $tp->edit($id);
