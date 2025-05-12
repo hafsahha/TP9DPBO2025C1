@@ -1,70 +1,44 @@
 <?php
 
-// Include the View (TampilMahasiswa)
+/******************************************
+ Asisten Pemrogaman 13 & 14
+******************************************/
+
+// Include the View (TampilMahasiswa) and Presenter
 include("view/TampilMahasiswa.php");
 
 // Instantiate the View (delegates to Presenter)
 $tp = new TampilMahasiswa();
 
-// Add new data
-if (isset($_POST['tambah'])) {
-    // Gather data from the form
-    $data = [
-        'nim' => $_POST['nim'],
-        'nama' => $_POST['nama'],
-        'tempat' => $_POST['tempat'],
-        'tl' => $_POST['tl'],
-        'gender' => $_POST['gender'],
-        'email' => $_POST['email'],
-        'telp' => $_POST['telp']
-    ];
-    // Call the method to add new student data
-    $tp->tambahData($data);
-    // Redirect back to index.php
-    header("Location: index.php");
-    exit;
-
-} 
-// Edit data
-elseif (isset($_GET['edit'])) {
-    // Get student ID for editing
-    $id = $_GET['edit'];
-    // Call the method to show student data for editing
-    $tp->editData($id);
-
-} 
-// Update data
-elseif (isset($_POST['update'])) {
-    // Get student ID and updated data
+if(isset($_POST['add_proses'])){
+    $nim = $_POST['nim'];
+    $nama = $_POST['nama'];
+    $tempat = $_POST['tempat'];
+    $tl = $_POST['tl'];
+    $gender = $_POST['gender'];
+    $email = $_POST['email'];
+    $telp = $_POST['telp'];
+    $tp->add($nim, $nama, $tempat, $tl, $gender, $email, $telp);
+}else if(isset($_POST['update_proses'])){
     $id = $_POST['id'];
-    $data = [
-        'nim' => $_POST['nim'],
-        'nama' => $_POST['nama'],
-        'tempat' => $_POST['tempat'],
-        'tl' => $_POST['tl'],
-        'gender' => $_POST['gender'],
-        'email' => $_POST['email'],
-        'telp' => $_POST['telp']
-    ];
-    // Call the method to update student data
-    $tp->updateData($id, $data);
-    // Redirect back to index.php
-    header("Location: index.php");
-    exit;
-
-} 
-// Delete data
-elseif (isset($_GET['delete'])) {
-    // Get student ID for deletion
-    $id = $_GET['delete'];
-    // Call the method to delete student data
-    $tp->deleteData($id);
-    // Redirect back to index.php
-    header("Location: index.php");
-    exit;
-
-} else {
-    // Default action: Display the list of students
+    $nim = $_POST['nim'];
+    $nama = $_POST['nama'];
+    $tempat = $_POST['tempat'];
+    $tl = $_POST['tl'];
+    $gender = $_POST['gender'];
+    $email = $_POST['email'];
+    $telp = $_POST['telp'];
+    $tp->update($id, $nim, $nama, $tempat, $tl, $gender, $email, $telp);
+}else if(isset($_POST['delete_proses'])){
+    $id = $_POST['id'];
+    $tp->hapus($id);   
+    $tp->tampil();
+}else if(isset($_GET['id_hapus'])){
+    $id = $_GET['id_hapus'];
+    $tp->delete($id); 
+}else if(isset($_GET['id_edit'])){
+    $id = $_GET['id_edit'];
+    $tp->edit($id);
+}else{
     $tp->tampil();
 }
-?>

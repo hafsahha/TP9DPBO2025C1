@@ -6,11 +6,11 @@
 
 class DB
 {
-	var $db_host = ''; // host
-	var $db_user = ''; // user basis data
+	var $db_host = 'localhost'; // host
+	var $db_user = 'root'; // user basis data
 	var $db_password = ''; // password
-	var $db_name = ''; // nama basis data
-	var $db_link = ''; // nama basis data
+	var $db_name = 'db_mvp'; // nama basis data
+	var $db_link = 'db_mvp'; // nama basis data
 	var $result = 0;
 
 	function __construct($db_host = '', $db_user = '', $db_password = '', $db_name = '')

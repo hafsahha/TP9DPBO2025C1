@@ -22,4 +22,7 @@ interface KontrakPresenter
 	public function getEmail($i);
 	public function getTelp($i); 
 	public function getSize();
+	public function addMahasiswa($nim, $nama, $tempat, $tl, $gender, $email, $telp);
+	public function editMahasiswa($id, $nim, $nama, $tempat, $tl, $gender, $email, $telp);
+	public function deleteMahasiswa($id);
 }
