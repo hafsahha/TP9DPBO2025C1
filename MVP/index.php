@@ -19,6 +19,7 @@ if(isset($_POST['add_proses'])){
     $email = $_POST['email'];
     $telp = $_POST['telp'];
     $tp->add($nim, $nama, $tempat, $tl, $gender, $email, $telp);
+    $tp->tampil();
 }else if(isset($_POST['update_proses'])){
     $id = $_POST['id'];
     $nim = $_POST['nim'];
